@@ -7,7 +7,7 @@ export = function externalSourceMaps({exclude = []} = {}) {
   return function externalSourceMaps(this: WebpackConfigWithMetadata): WebpackConfigWithMetadata {
     return {
       module: {
-        loaders: get(this, 'module.loaders', []).concat([{
+        rules: get(this, 'module.rules', []).concat([{
           test: /\.jsx?$/,
           loader: 'source-map',
           enforce: 'pre', 
