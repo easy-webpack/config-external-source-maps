@@ -9,7 +9,7 @@ export = function externalSourceMaps({exclude = []} = {}) {
       module: {
         rules: get(this, 'module.rules', []).concat([{
           test: /\.jsx?$/,
-          loader: 'source-map',
+          loader: 'source-map-loader',
           enforce: 'pre', 
           exclude
         }])
